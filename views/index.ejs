@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Which is that actor/actress</title>
-</head>
+<%- include ('./templates/head') %>
 
 <body>
-    <h1>Welcome to <%= title %> </h1>
+    <%- include ('./templates/header') %>
+    <form class="container" action="/image">
+        <input type="text" name="image_url" id="imageURL" value="" placeholder="Paste in the image url">
+        <button id="btn" class="submit-button">Submit</button>
+    </form>
+    <div class="image-container">
+        <h3 id="details"> <%= name %> </h3>
+        <div class="image">
+            <img id="image" src='<%= image_url %>' alt="">
+            <div class="box not-show"></div>
+        </div>
+    </div>
+    <%- include ('./templates/footer') %>
 </body>
 
 </html>

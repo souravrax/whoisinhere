@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #111118;
+}
+
+.header {
+  background-image: url("https://source.unsplash.com/random/");
+  /* background-color: rgba(255, 0, 0, 0.301); */
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border: none;
+  position: relative;
+}
+
+.header div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1818187a;
+  filter: blur(1.2px);
+}
+
+.header div h1 {
+  color: #ffffffe0;
+  z-index: 5;
+}
+
+.container {
+  max-width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+#imageURL {
+  width: 40%;
+  padding: 6px 6px;
+  border: none;
+  border-radius: 5px;
+  border-radius: 50px;
+  background: #111118;
+  padding-left: 20px;
+  box-shadow: 10px 10px 19px #0e0e14, -10px -10px 19px #14141c;
+  outline: none;
+}
+
+.submit-button {
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  margin-left: 10px;
+  border: none;
+  color: #b8b8b8;
+  border-radius: 50px;
+  background: #111118;
+  box-shadow: 10px 10px 19px #0e0e14, -10px -10px 19px #14141c;
+  outline: none;
+}
+
+.submit-button:focus,
+#imageURL:focus {
+  border-radius: 50px;
+  background: #111118;
+  box-shadow: 5px 5px 5px #0e0e14, -5px -5px 5px #14141c, inset 5px 5px 5px #0e0e14, inset -5px -5px 5px #14141c;
+}
+
+.image-container {
+  width: 100%;
+  background-repeat: no-repeat;
+  padding: 80px;
+  text-align: center;
+}
+
+.image-container #details {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.image-container .image {
+  position: relative;
+  padding: 80px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 19px #0e0e14, -10px -10px 19px #14141c;
+  text-align: center;
+}
+
+.image-container .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  box-shadow: 5px 5px 5px #0e0e14, -5px -5px 5px #14141c, inset 5px 5px 5px #0e0e14, inset -5px -5px 5px #14141c;
+  padding: 8px;
+}
+
+.image-container .image .box {
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  background-color: transparent;
+  border: 2px solid red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.not-show {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #000;
+  color: white;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
