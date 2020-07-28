@@ -2,8 +2,9 @@
 
 <body>
     <%- include ('./templates/header') %>
-    <form class="container" action="/image">
-        <input type="text" name="image_url" id="imageURL" value="" placeholder="Paste in the image url">
+    <form class="container" action="/image" autocomplete="off">
+        <input type="text" name="image_url" id="imageURL" value="" autocomplete="off"
+            placeholder="Paste in the image url">
         <button id="btn" class="submit-button">Submit</button>
     </form>
     <div class="image-container">

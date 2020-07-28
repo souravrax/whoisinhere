@@ -9,9 +9,11 @@ const app = new Clarifai.App({
     apiKey: process.env.API_KEY
 })
 
-const getdata = async (url) => {
+const model = "e466caa0619f444ab97497640cefc4dc";
+
+const getData = async (url) => {
     try {
-        const data = await app.models.predict('e466caa0619f444ab97497640cefc4dc', url);
+        const data = await app.models.predict(model, url);
         const image = await probe(url);
 
         const res = getNestedData(data, image);
@@ -25,7 +27,7 @@ const getdata = async (url) => {
 router.get('/', async function (req, res, next) {
     const image_url = req.query.image_url;
 
-    let data = await getdata(image_url);
+    let data = await getData(image_url);
 
 
     data = {
