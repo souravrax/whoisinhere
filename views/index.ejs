@@ -7,10 +7,17 @@
         <button id="btn" class="submit-button">Submit</button>
     </form>
     <div class="image-container">
-        <h3 id="details"> <%= name %> </h3>
+        <h3 id="details"><%= name %> </h3>
         <div class="image">
             <img id="image" src='<%= image_url %>' alt="">
-            <div class="box not-show"></div>
+            <div class="box" style="
+                position: absolute;
+                top: <%= top %>px;
+                left: <%= left %>px;
+                right: <%= right %>px;
+                bottom: <%= bottom %>px;
+                display: <%= display %>;
+            "></div>
         </div>
     </div>
     <%- include ('./templates/footer') %>

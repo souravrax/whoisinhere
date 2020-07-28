@@ -3,16 +3,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const Clarifai = require('clarifai');
+
 require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const imageRouter = require('./routes/image');
 const app = express();
-
-const model = new Clarifai.App({
-  apiKey: process.env.API_KEY
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -99,6 +99,7 @@ body {
 .image-container #details {
   margin-bottom: 20px;
   color: white;
+  text-transform: uppercase;
 }
 
 .image-container .image {

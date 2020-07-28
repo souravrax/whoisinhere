@@ -8,6 +8,7 @@
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "clarifai": "^2.9.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -16,7 +17,8 @@
     "express": "~4.16.1",
     "helmet": "^3.23.3",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "probe-image-size": "^5.0.0"
   },
   "devDependencies": {
     "opn": "^6.0.0"
